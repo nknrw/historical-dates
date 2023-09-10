@@ -3,7 +3,7 @@ $headingBg: url('./assets/heading-bg.svg');
 $blackBlue: #42567A;
 
 .app {
-  background: $pageBg no-repeat center/contain;
+  background: $pageBg no-repeat top;
   max-width: 1440px;
   height: 100%;
   display: flex;

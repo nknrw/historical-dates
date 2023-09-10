@@ -5,12 +5,13 @@ $blackBlue: #42567A;
 
 .event {
   max-width: 400px;
-  max-height: 135px;
+  // max-height: 135px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 0;
   padding: 0;
+  // overflow: visible;
 }
 
 .event-year {
@@ -25,4 +26,5 @@ $blackBlue: #42567A;
   line-height: 150%;
   color: $blackBlue;
   margin: 0;
+  // overflow: visible;
 }

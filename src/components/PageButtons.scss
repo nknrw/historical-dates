@@ -10,6 +10,7 @@ $pageButtonBg: url(../assets/page-button.svg);
   justify-self: flex-end;
   margin-left: 80px;
   gap: 20px;
+  z-index: 999;
 }
 
 .page-buttons-container {
@@ -31,11 +32,11 @@ $pageButtonBg: url(../assets/page-button.svg);
   opacity: 0.5;
 }
 
-.prev {
+.page-prev {
 
 }
 
-.next {
+.page-next {
   transform: rotate(180deg);
 }
 

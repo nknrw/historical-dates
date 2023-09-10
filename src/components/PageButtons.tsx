@@ -29,11 +29,11 @@ const PageButtons: React.FC<PageButtonsProps> = ({
       <span className='page-indicator'>{`${currentPage.toString().padStart(2, '0')} / ${totalPages.toString().padStart(2, '0')}`}</span>
       <div className='page-buttons-container'>
         <button
-          className='page-button prev'
+          className='page-button page-prev'
           onClick={handlePrevPage}
           disabled={currentPage === 1}
         ></button>
-        <button className='page-button next' onClick={handleNextPage} disabled={currentPage === totalPages}></button>
+        <button className='page-button page-next' onClick={handleNextPage} disabled={currentPage === totalPages}></button>
       </div>
     </div>
   );

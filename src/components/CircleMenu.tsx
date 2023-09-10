@@ -31,7 +31,7 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
 		const elementSize = 50;
 
 		const elements = Array.from({ length: totalPages }).map((_, index) => {
-			const angle = index * angleIncrement;
+			const angle = (index - 1) * angleIncrement;
 			const x = centerX + radius * Math.cos(angle) - elementSize / 2;
 			const y = centerY + radius * Math.sin(angle) - elementSize / 2;
 
@@ -115,3 +115,93 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
 };
 
 export default CircleMenu;
+
+// import React, { useState, useEffect, useRef } from 'react';
+// import './CircleContainer.scss';
+// import gsap from 'gsap';
+
+// interface CircleContainerProps {
+// 	totalPages: number;
+// 	currentPage: number;
+// 	onPageChange: (page: number) => void;
+// }
+
+// const CircleContainer: React.FC<CircleContainerProps> = ({
+// 	totalPages,
+// 	currentPage,
+// 	onPageChange,
+// }) => {
+// 	const [circleElements, setCircleElements] = useState<JSX.Element[]>([]);
+// 	const circleRef = useRef<HTMLDivElement | null>(null);
+// 	const activeButtonsRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+// 	useEffect(() => {
+// 		const radius = 265; // Радиус круга
+// 		const angleIncrement = (2 * Math.PI) / totalPages;
+// 		const centerX = 265; // Центр круга по горизонтали
+// 		const centerY = 265; // Центр круга по вертикали
+// 		const elementSize = 50; // Размер элемента .circle-element (ширина и высота)
+
+// 		const elements = Array.from({ length: totalPages }).map((_, index) => {
+// 			const angle = (index - 1) * angleIncrement;
+// 			const x = centerX + radius * Math.cos(angle) - elementSize / 2;
+// 			const y = centerY + radius * Math.sin(angle) - elementSize / 2;
+
+// 			return (
+// 				<div
+// 					key={index}
+// 					className={`circle-element ${
+// 						currentPage === index + 1 ? 'active' : ''
+// 					}`}
+// 					onClick={() => handlePageChange(index + 1)}
+// 					style={{
+// 						width: `${elementSize}px`,
+// 						height: `${elementSize}px`,
+// 						left: `${x}px`,
+// 						top: `${y}px`,
+// 					}}
+// 					ref={(el) => {
+// 						activeButtonsRefs.current[index] = el;
+// 					}}
+// 				>
+// 					<div className="inner-circle">
+// 						<span className="text">{index + 1}</span>
+// 					</div>
+// 				</div>
+// 			);
+// 		});
+
+// 		setCircleElements(elements);
+// 		rotateToActivePage(currentPage);
+// 	}, [totalPages, currentPage]);
+
+// 	const handlePageChange = (page: number) => {
+// 		onPageChange(page);
+// 		rotateToActivePage(page);
+// 	};
+
+// 	const rotateToActivePage = (page: number) => {
+// 		if (circleRef.current) {
+// 			const angleIncrement = (2 * Math.PI) / totalPages;
+// 			const angle = (page - 1) * angleIncrement; // Изменено
+
+// 			gsap.to(circleRef.current, { rotation: -angle * (180 / Math.PI) });
+// 			if (activeButtonsRefs.current.length > 0) {
+// 				activeButtonsRefs.current.forEach((buttonRef, index) => {
+// 					if (buttonRef) {
+// 						gsap.to(buttonRef, { rotation: angle * (180 / Math.PI) });
+// 					}
+// 				});
+// 			}
+// 		}
+// 	};
+
+// 	return (
+// 		<div className="circle-container" ref={circleRef}>
+// 			{circleElements.map((element) => element)}
+// 		</div>
+// 	);
+// };
+
+// export default CircleContainer;
+

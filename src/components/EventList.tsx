@@ -1,8 +1,8 @@
 import React from 'react';
 import {FreeMode, Navigation} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
+// import 'swiper/scss';
+// import 'swiper/scss/navigation';
 import './EventList.scss';
 import { Event as EventType } from '../types'
 import Event from './Event';
@@ -22,19 +22,26 @@ const EventList: React.FC<EventListProps> = ({ currentPage, eventsPerPage, event
 
 	return (
 		<div className="event-list">
+			
 			<Swiper
 				modules={[FreeMode, Navigation]}
-				navigation={true}
+				navigation={{
+					prevEl: '.prev',
+          nextEl: '.next',
+          disabledClass: 'disabled'
+        }}
 				spaceBetween={80}
 				freeMode={true}
-				slidesPerView={3}
+        slidesPerView={3}
 			>
 				{events.map((event) => (
 					<SwiperSlide key={event.id}>
 						<Event key={event.id} event={event} />
 					</SwiperSlide>
 				))}
-			</Swiper>
+      </Swiper>
+      <div className="event-list-button prev"></div>
+			<div className="event-list-button next"></div>
 		</div>
 	);
 };
