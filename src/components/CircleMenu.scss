@@ -1,0 +1,122 @@
+.circle-menu {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: calc(25% - 60px);
+  
+}
+
+.circle-container {
+  // position: absolute;
+  width: 530px;
+  height: 530px;
+  border: 1px solid rgba(48, 62, 88, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  // margin: -325px 0 0 -265px;
+  
+  z-index: 9999;
+
+
+  .circle-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: rgba(48, 62, 88, 0.2);
+    cursor: pointer;
+
+    .inner-circle {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: #42567A;
+      color: rgba(48, 62, 88, 0.2);
+      transform: scale(0.1);
+      transition: 0.2s linear;
+    }
+
+    &:hover .inner-circle {
+      border: 1px solid #42567A;
+      background-color: #F4F5F9;
+      color: rgba(48, 62, 88, 0.2);
+      transform: scale(1);
+      transition: 0.2s linear;
+    }
+  }
+
+  .circle-element.active {
+    .inner-circle {
+      border: 1px solid #42567A;
+      background-color: #F4F5F9;
+      color: rgba(48, 62, 88, 0.2);
+      transform: scale(1);
+      transition: 0.2s linear;
+    }
+  }
+
+  .text {
+    color: #42567A;
+  }
+}
+
+
+$irisColor: #5D5FEF;
+$fuschiaColor: #EF5DA8;
+
+//.year-range {
+//  width: 100%;
+//  display: flex;
+//  gap: 100px;
+//  justify-content: center;
+//  flex-grow: 1;
+//  align-items: center;
+//  text-align: center;
+//}
+
+.year-range {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  text-align: center;
+  width: 100%;
+  // top: 50%;
+  justify-self: center;
+  align-self: center;
+  // top: 50%;
+  // left: 50%;
+  // margin-top: -140px;
+  // margin: -325px 0 0 -265px;
+}
+
+.year-start {
+  display: flex;
+  font-size: 200px;
+  padding: 0;
+  margin: 0;
+  color: $irisColor;
+  line-height: 160px;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+
+.year-finish {
+  display: flex;
+  font-size: 200px;
+  padding: 0;
+  margin: 0;
+  color: $fuschiaColor;
+  line-height: 160px;
+  font-weight: 700;
+  letter-spacing: -4px;
+}

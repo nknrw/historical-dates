@@ -1,0 +1,46 @@
+$pageButtonBg: url(../assets/page-button.svg);
+
+.page-buttons {
+  //align-self: end;
+  // flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  // align-items: end;
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-left: 80px;
+  gap: 20px;
+}
+
+.page-buttons-container {
+  display: flex;
+  gap: 20px;
+  margin: auto 0 0 0;
+}
+
+.page-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px rgba(66, 86, 122, 0.5) solid;
+  background: transparent $pageButtonBg no-repeat center/contain;
+  cursor: pointer;
+}
+
+.page-button:disabled {
+  opacity: 0.5;
+}
+
+.prev {
+
+}
+
+.next {
+  transform: rotate(180deg);
+}
+
+.page-indicator {
+  color: #42567A;
+  font-size: 14px;
+  // margin-bottom: 20px;
+}
