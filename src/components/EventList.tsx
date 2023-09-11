@@ -33,7 +33,8 @@ const EventList: React.FC<EventListProps> = ({
 						slidesPerView: 3,
 						spaceBetween: 80,
 						freeMode: true,
-						// pagination: true,
+						grabCursor: true,
+						pagination: false,
 					},
 				}}
 				modules={[FreeMode, Navigation, Pagination ]}
@@ -46,7 +47,6 @@ const EventList: React.FC<EventListProps> = ({
 				spaceBetween={25}
 				// freeMode={true}
         slidesPerView={2}
-        updateOnWindowResize={true}
 				pagination={true}
 			>
 				{events.map((event) => (
