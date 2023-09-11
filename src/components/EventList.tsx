@@ -20,14 +20,15 @@ const EventList: React.FC<EventListProps> = ({
 	eventsPerPage,
 	events,
 }) => {
-	// Рассчитываем индекс первого события на текущей странице
-	const startIndex = (currentPage - 1) * eventsPerPage;
-	// Отфильтровываем события для отображения на текущей странице
-	const displayedEvents = events.slice(startIndex, startIndex + eventsPerPage);
+	// // Рассчитываем индекс первого события на текущей странице
+	// const startIndex = (currentPage - 1) * eventsPerPage;
+	// // Отфильтровываем события для отображения на текущей странице
+	// const displayedEvents = events.slice(startIndex, startIndex + eventsPerPage);
 
 	return (
 		<div className="event-list">
       <Swiper
+				key={currentPage}
 				breakpoints={{
 					768: {
 						slidesPerView: 3,
@@ -46,8 +47,9 @@ const EventList: React.FC<EventListProps> = ({
 				// slideActiveClass={'active'}
 				spaceBetween={25}
 				// freeMode={true}
-        slidesPerView={2}
+        slidesPerView={1.75}
 				pagination={true}
+				slidesOffsetAfter={130}
 			>
 				{events.map((event) => (
 					<SwiperSlide key={event.id}>

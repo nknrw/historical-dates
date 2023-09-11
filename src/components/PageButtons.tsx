@@ -12,6 +12,7 @@ const PageButtons: React.FC<PageButtonsProps> = ({
 	currentPage,
 	onPageChange,
 }) => {
+
 	const handlePrevPage = () => {
 		if (currentPage > 1) {
 			onPageChange(currentPage - 1);
