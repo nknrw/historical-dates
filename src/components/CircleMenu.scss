@@ -4,7 +4,12 @@
   display: flex;
   justify-content: center;
   top: calc(25% - 60px);
-  
+}
+
+@media screen and (max-width: 768px) {
+  .circle-container {
+    display: none;
+  }
 }
 
 .circle-container {
@@ -119,4 +124,30 @@ $fuschiaColor: #EF5DA8;
   line-height: 160px;
   font-weight: 700;
   letter-spacing: -4px;
+}
+
+@media screen and (max-width: 768px) {
+  .circle-menu {
+    height: 50%;
+    top: 0;
+  }
+
+  .year-range {
+    //height: 100%;
+    width: 100%;
+    position: relative;
+    gap: 40px;
+    border-bottom: #C7CDD9 1px solid;
+    align-self: flex-end;
+  }
+
+  .year-finish {
+    font-size: 56px;
+  }
+
+  .year-start {
+    font-size: 56px;
+    // position: relative;
+    // width: 100%;
+  }
 }

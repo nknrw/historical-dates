@@ -13,6 +13,8 @@ $pageButtonBg: url(../assets/page-button.svg);
   z-index: 999;
 }
 
+
+
 .page-buttons-container {
   display: flex;
   gap: 20px;
@@ -44,4 +46,22 @@ $pageButtonBg: url(../assets/page-button.svg);
   color: #42567A;
   font-size: 14px;
   // margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-buttons-container {
+    gap: 8px;
+  }
+
+  .page-buttons {
+    order: 2;
+    margin: 0 0 13px 0;
+    gap: 10px;
+    position: absolute;
+  }
+
+  .page-button {
+    width: 25px;
+    height: 25px;
+  }
 }

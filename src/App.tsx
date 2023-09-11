@@ -8,6 +8,7 @@ import PageButtons from './components/PageButtons';
 // import YearRange from './components/YearRange';
 import data from './mock.json'; // Импорт данных из mock.json
 import {Event as EventType} from './types';
+import Swiper from 'swiper';
 
 const App: React.FC = () => {
   const [events, setEvents] = useState<EventType[]>(data);
