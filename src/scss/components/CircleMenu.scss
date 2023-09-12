@@ -1,7 +1,4 @@
-$irisColor: #5d5fef;
-$fuschiaColor: #ef5da8;
-$hoverBgColor: #f4f5f9;
-$borderColor: #42567a;
+@import "vars";
 
 .circle-menu {
   position: absolute;
@@ -19,7 +16,7 @@ $borderColor: #42567a;
 .circle-container {
   width: 530px;
   height: 530px;
-  border: 1px solid rgba(48, 62, 88, 0.2);
+  border: 1px solid rgba($mainColor, 0.2);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -34,7 +31,7 @@ $borderColor: #42567a;
     text-align: center;
     line-height: 50px;
     font-size: 18px;
-    color: rgba(48, 62, 88, 0.2);
+    color: rgba($mainColor, 0.2);
     cursor: pointer;
 
     .inner-circle {
@@ -44,16 +41,16 @@ $borderColor: #42567a;
       border-radius: 50%;
       align-items: center;
       justify-content: center;
-      background-color: #42567a;
-      color: rgba(48, 62, 88, 0.2);
+      background-color: $mainColor;
+      color: rgba($mainColor, 0.2);
       transform: scale(0.1);
       transition: 0.2s linear;
     }
 
     &:hover .inner-circle {
-      border: 1px solid $borderColor;
-      background-color: $hoverBgColor;
-      color: rgba(48, 62, 88, 0.2);
+      border: 1px solid $mainColor;
+      background-color: $bgColor;
+      color: rgba($mainColor, 0.2);
       transform: scale(1);
       transition: 0.2s linear;
     }
@@ -61,16 +58,16 @@ $borderColor: #42567a;
 
   .circle-element.active {
     .inner-circle {
-      border: 1px solid $borderColor;
-      background-color: $hoverBgColor;
-      color: rgba(48, 62, 88, 0.2);
+      border: 1px solid $mainColor;
+      background-color: $bgColor;
+      color: rgba($mainColor, 0.2);
       transform: scale(1);
       transition: 0.2s linear;
     }
   }
 
   .text {
-    color: #42567a;
+    color: $mainColor;
   }
 }
 

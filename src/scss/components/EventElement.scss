@@ -1,6 +1,4 @@
-$fontYear: 'Bebas Neue', sans-serif;
-$yearBlue: #3877ee;
-$blackBlue: #42567a;
+@import "vars";
 
 .event {
   display: flex;
@@ -13,7 +11,7 @@ $blackBlue: #42567a;
 
 .event-year {
   font: 25px $fontYear;
-  color: $yearBlue;
+  color: $secondaryColor;
   margin: 0;
 }
 
@@ -21,7 +19,7 @@ $blackBlue: #42567a;
   text-align: left;
   font-size: 20px;
   line-height: 150%;
-  color: $blackBlue;
+  color: $mainColor;
   margin: 0;
 }
 

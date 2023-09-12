@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import React, {useEffect, useRef, useState} from 'react';
-import './CircleMenu.scss';
+import '../scss/components/CircleMenu.scss';
 
 interface CircleContainerProps {
   totalPages: number;

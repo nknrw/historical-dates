@@ -1,6 +1,4 @@
-$pageBg: url('./assets/bg.svg');
-$headingBg: url('./assets/heading-bg.svg');
-$blackBlue: #42567a;
+@import "../vars";
 
 .app {
   background: $pageBg no-repeat top/contain;

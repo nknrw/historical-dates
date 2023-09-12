@@ -1,5 +1,5 @@
 import React from 'react';
-import './PageButtons.scss';
+import '../scss/components/PageButtons.scss';
 
 interface PageButtonsProps {
   totalPages: number;

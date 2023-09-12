@@ -1,4 +1,4 @@
-$swiperButton: url(../../assets/swiper-button.svg);
+@import "vars";
 
 .event-list {
   height: 240px;
@@ -10,7 +10,7 @@ $swiperButton: url(../../assets/swiper-button.svg);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+  box-shadow: 0 0 15px $shadowColor;
   background: transparent $swiperButton no-repeat 50%;
   cursor: pointer;
   position: absolute;
@@ -50,7 +50,7 @@ $swiperButton: url(../../assets/swiper-button.svg);
     margin: 0;
     justify-self: flex-end;
     align-self: flex-end;
-    border-top: #c7cdd9 1px solid;
+    border-top: $mobileBorderColor 1px solid;
     padding-top: 20px;
   }
 
@@ -77,6 +77,6 @@ $swiperButton: url(../../assets/swiper-button.svg);
   }
 
   .swiper-pagination-bullet-active {
-    background: #42567a;
+    background: $mainColor;
   }
 }
