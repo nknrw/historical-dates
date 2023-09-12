@@ -1,25 +1,19 @@
+// fonts
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
-
-
 $fontMain: 'PT Sans', sans-serif;
 $fontYear: 'Bebas Neue', sans-serif;
-
 
 // colors
 $bgColor: #f4f5f9;
 $mainColor: #42567a;
 $secondaryColor: #3877ee;
 $mobileBorderColor: #c7cdd9;
-
 $irisColor: #5d5fef;
 $fuschiaColor: #ef5da8;
-
 $shadowColor: rgba(56, 119, 238, 0.1);
-
-
 
 //images
 $pageBg: url('../assets/bg.svg');
 $headingBg: url('../assets/heading-bg.svg');
 $swiperButton: url(../assets/swiper-button.svg);
-$pageButtonBg: url(../../assets/page-button.svg);
+$pageButtonBg: url(../assets/page-button.svg);
