@@ -1,19 +1,14 @@
-$pageButtonBg: url(../assets/page-button.svg);
+$pageButtonBg: url(../../assets/page-button.svg);
 
 .page-buttons {
-  //align-self: end;
-  // flex-grow: 1;
   display: flex;
   flex-direction: column;
-  // align-items: end;
   align-self: flex-start;
   justify-self: flex-end;
   margin-left: 80px;
   gap: 20px;
   z-index: 999;
 }
-
-
 
 .page-buttons-container {
   display: flex;
@@ -34,18 +29,13 @@ $pageButtonBg: url(../assets/page-button.svg);
   opacity: 0.5;
 }
 
-.page-prev {
-
-}
-
 .page-next {
   transform: rotate(180deg);
 }
 
 .page-indicator {
-  color: #42567A;
+  color: #42567a;
   font-size: 14px;
-  // margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {

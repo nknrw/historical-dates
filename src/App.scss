@@ -1,6 +1,6 @@
 $pageBg: url('./assets/bg.svg');
 $headingBg: url('./assets/heading-bg.svg');
-$blackBlue: #42567A;
+$blackBlue: #42567a;
 
 .app {
   background: $pageBg no-repeat top/contain;
@@ -16,7 +16,6 @@ $blackBlue: #42567A;
   gap: 56px;
 }
 
-
 .app-heading {
   position: absolute;
   font-size: 56px;
@@ -26,7 +25,6 @@ $blackBlue: #42567A;
   padding: 0 0 0 80px;
   width: min-content;
   line-height: 120%;
-  // margin: 170px 0 0 0;
   margin: 0;
   top: 170px;
   left: 0;
@@ -34,9 +32,7 @@ $blackBlue: #42567A;
 
 @media screen and (max-width: 768px) {
   .app-heading {
-    // position: relative;
     background: none;
-    // left: 20px;
     top: 60px;
     font-size: 20px;
     padding: 0;

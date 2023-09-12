@@ -1,26 +1,16 @@
-$swiperButton: url(../assets/swiper-button.svg);
+$swiperButton: url(../../assets/swiper-button.svg);
 
 .event-list {
-  // height: fit-content;
   height: 240px;
   width: calc(100% - 160px);
-  // width: 100%;
-  // padding: 0 80px;
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  //margin-bottom: 105px;
-  // flex-shrink: 1;
-  // overflow: visible;
-  //align-self: flex-end;
 }
 
 .event-list-button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  // border: 1px rgba(66, 86, 122, 0.5) solid;
-  box-shadow: 0 0 15px rgba(56, 119, 238, 0.10);
+  box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
   background: transparent $swiperButton no-repeat 50%;
   cursor: pointer;
   position: absolute;
@@ -40,7 +30,6 @@ $swiperButton: url(../assets/swiper-button.svg);
   display: none;
 }
 
-
 .next {
   left: auto;
   right: -50px;
@@ -54,7 +43,6 @@ $swiperButton: url(../assets/swiper-button.svg);
   display: none;
 }
 
-
 @media screen and (max-width: 768px) {
   .event-list {
     width: 100%;
@@ -62,7 +50,7 @@ $swiperButton: url(../assets/swiper-button.svg);
     margin: 0;
     justify-self: flex-end;
     align-self: flex-end;
-    border-top: #C7CDD9 1px solid;
+    border-top: #c7cdd9 1px solid;
     padding-top: 20px;
   }
 
@@ -89,7 +77,6 @@ $swiperButton: url(../assets/swiper-button.svg);
   }
 
   .swiper-pagination-bullet-active {
-    background: #42567A;
+    background: #42567a;
   }
-
 }

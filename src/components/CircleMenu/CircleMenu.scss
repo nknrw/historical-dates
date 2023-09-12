@@ -1,6 +1,10 @@
+$irisColor: #5d5fef;
+$fuschiaColor: #ef5da8;
+$hoverBgColor: #f4f5f9;
+$borderColor: #42567a;
+
 .circle-menu {
   position: absolute;
-  // width: 100%;
   display: flex;
   justify-content: center;
   top: calc(25% - 60px);
@@ -13,17 +17,14 @@
 }
 
 .circle-container {
-  // position: absolute;
   width: 530px;
   height: 530px;
   border: 1px solid rgba(48, 62, 88, 0.2);
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  // margin: -325px 0 0 -265px;
-  
-  z-index: 9999;
 
+  z-index: 9999;
 
   .circle-element {
     position: absolute;
@@ -43,15 +44,15 @@
       border-radius: 50%;
       align-items: center;
       justify-content: center;
-      background-color: #42567A;
+      background-color: #42567a;
       color: rgba(48, 62, 88, 0.2);
       transform: scale(0.1);
       transition: 0.2s linear;
     }
 
     &:hover .inner-circle {
-      border: 1px solid #42567A;
-      background-color: #F4F5F9;
+      border: 1px solid $borderColor;
+      background-color: $hoverBgColor;
       color: rgba(48, 62, 88, 0.2);
       transform: scale(1);
       transition: 0.2s linear;
@@ -60,8 +61,8 @@
 
   .circle-element.active {
     .inner-circle {
-      border: 1px solid #42567A;
-      background-color: #F4F5F9;
+      border: 1px solid $borderColor;
+      background-color: $hoverBgColor;
       color: rgba(48, 62, 88, 0.2);
       transform: scale(1);
       transition: 0.2s linear;
@@ -69,23 +70,9 @@
   }
 
   .text {
-    color: #42567A;
+    color: #42567a;
   }
 }
-
-
-$irisColor: #5D5FEF;
-$fuschiaColor: #EF5DA8;
-
-//.year-range {
-//  width: 100%;
-//  display: flex;
-//  gap: 100px;
-//  justify-content: center;
-//  flex-grow: 1;
-//  align-items: center;
-//  text-align: center;
-//}
 
 .year-range {
   position: absolute;
@@ -95,13 +82,8 @@ $fuschiaColor: #EF5DA8;
   gap: 100px;
   text-align: center;
   width: 100%;
-  // top: 50%;
   justify-self: center;
   align-self: center;
-  // top: 50%;
-  // left: 50%;
-  // margin-top: -140px;
-  // margin: -325px 0 0 -265px;
 }
 
 .year-start {
@@ -133,11 +115,9 @@ $fuschiaColor: #EF5DA8;
   }
 
   .year-range {
-    //height: 100%;
     width: 100%;
     position: relative;
     gap: 40px;
-    //border-bottom: #C7CDD9 1px solid;
     align-self: flex-end;
   }
 
@@ -147,7 +127,5 @@ $fuschiaColor: #EF5DA8;
 
   .year-start {
     font-size: 56px;
-    // position: relative;
-    // width: 100%;
   }
 }

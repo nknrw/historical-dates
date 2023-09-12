@@ -1,18 +1,14 @@
-$fontYear: 'Bebas Neue',sans-serif;
-$yearBlue: #3877EE;
-
-$blackBlue: #42567A;
+$fontYear: 'Bebas Neue', sans-serif;
+$yearBlue: #3877ee;
+$blackBlue: #42567a;
 
 .event {
-  //max-width: 320px;
-  //min-width: 160px;
-  // max-height: 135px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 0;
   padding: 0;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .event-year {
@@ -27,8 +23,6 @@ $blackBlue: #42567A;
   line-height: 150%;
   color: $blackBlue;
   margin: 0;
-  //text-wrap: ;
-  // overflow: visible;
 }
 
 @media screen and (max-width: 768px) {
