@@ -2,9 +2,9 @@ import React from 'react';
 import {FreeMode, Navigation, Pagination} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/scss/pagination';
+import '../scss/components/EventList.scss';
 import {Event as EventType} from '../types';
 import Event from './EventElement';
-import '../scss/components/EventList.scss';
 
 interface EventListProps {
   currentPage: number;

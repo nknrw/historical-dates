@@ -1,6 +1,6 @@
 import React from 'react';
-import {Event as EventType} from '../types';
 import '../scss/components/EventElement.scss';
+import {Event as EventType} from '../types';
 
 interface EventProps {
   event: EventType;

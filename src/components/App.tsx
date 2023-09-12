@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import 'swiper/scss';
+import data from '../mock.json';
 import '../scss/components/App.scss';
+import {Event as EventType} from '../types';
 import CircleMenu from './CircleMenu';
 import EventsList from './EventList';
 import PageButtons from './PageButtons';
-import data from '../mock.json';
-import {Event as EventType} from '../types';
 
 const App: React.FC = () => {
   const [events, setEvents] = useState<EventType[]>(data);
