@@ -21,7 +21,8 @@
   height: 50px;
   border-radius: 50%;
   border: 1px rgba($mainColor, 0.5) solid;
-  background: transparent $pageButtonBg no-repeat center/contain;
+  background: transparent $pageButtonBg no-repeat center;
+  background-size: 25%;
   cursor: pointer;
 }
 

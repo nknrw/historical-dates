@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import 'swiper/scss';
-import data from '../mock.json';
-import '../scss/components/App.scss';
-import {Event as EventType} from '../types';
-import CircleMenu from './CircleMenu';
-import EventsList from './EventList';
-import PageButtons from './PageButtons';
+import React, { useEffect, useState } from "react";
+import "swiper/scss";
+import data from "../mock.json";
+import "../scss/components/App.scss";
+import { Event as EventType } from "../types";
+import CircleMenu from "./CircleMenu";
+import EventsList from "./EventList";
+import PageButtons from "./PageButtons";
 
 const App: React.FC = () => {
   const [events, setEvents] = useState<EventType[]>(data);
@@ -33,8 +33,8 @@ const App: React.FC = () => {
   const visibleEvents = events.slice(startIndex, endIndex);
 
   return (
-    <div className='app'>
-      <h1 className='app-heading'>Исторические даты</h1>
+    <div className="app">
+      <h1 className="app-heading">Исторические даты</h1>
       <CircleMenu
         totalPages={Math.ceil(events.length / eventsPerPage)}
         currentPage={currentPage}

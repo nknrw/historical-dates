@@ -1,6 +1,6 @@
-import gsap from 'gsap';
-import React, {useEffect, useRef, useState} from 'react';
-import '../scss/components/CircleMenu.scss';
+import gsap from "gsap";
+import React, { useEffect, useRef, useState } from "react";
+import "../scss/components/CircleMenu.scss";
 
 interface CircleContainerProps {
   totalPages: number;
@@ -11,12 +11,12 @@ interface CircleContainerProps {
 }
 
 const CircleMenu: React.FC<CircleContainerProps> = ({
-                                                      totalPages,
-                                                      currentPage,
-                                                      onPageChange,
-                                                      minYear,
-                                                      maxYear,
-                                                    }) => {
+  totalPages,
+  currentPage,
+  onPageChange,
+  minYear,
+  maxYear,
+}) => {
   const [circleElements, setCircleElements] = useState<JSX.Element[]>([]);
   const circleRef = useRef<HTMLDivElement | null>(null);
   const activeButtonsRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -30,7 +30,7 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
     const centerY = 265;
     const elementSize = 50;
 
-    const elements = Array.from({length: totalPages}).map((_, index) => {
+    const elements = Array.from({ length: totalPages }).map((_, index) => {
       const angle = (index - 1) * angleIncrement;
       const x = centerX + radius * Math.cos(angle) - elementSize / 2;
       const y = centerY + radius * Math.sin(angle) - elementSize / 2;
@@ -39,7 +39,7 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
         <div
           key={index}
           className={`circle-element ${
-            currentPage === index + 1 ? 'active' : ''
+            currentPage === index + 1 ? "active" : ""
           }`}
           onClick={() => handlePageChange(index + 1)}
           style={{
@@ -52,8 +52,8 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
             activeButtonsRefs.current[index] = el;
           }}
         >
-          <div className='inner-circle'>
-            <span className='text'>{index + 1}</span>
+          <div className="inner-circle">
+            <span className="text">{index + 1}</span>
           </div>
         </div>
       );
@@ -68,13 +68,13 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
       gsap.to(minYearRef.current, {
         duration: 0.5,
         textContent: minYear,
-        roundProps: 'textContent',
+        roundProps: "textContent",
       });
 
       gsap.to(maxYearRef.current, {
         duration: 0.5,
         textContent: maxYear,
-        roundProps: 'textContent',
+        roundProps: "textContent",
       });
     }
   }, [minYear, maxYear]);
@@ -89,12 +89,12 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
       const angleIncrement = (2 * Math.PI) / totalPages;
       const angle = (page - 1) * angleIncrement;
 
-      gsap.to(circleRef.current, {rotation: -angle * (180 / Math.PI)});
+      gsap.to(circleRef.current, { rotation: -angle * (180 / Math.PI) });
 
       if (activeButtonsRefs.current.length > 0) {
         activeButtonsRefs.current.forEach((buttonRef, index) => {
           if (buttonRef) {
-            gsap.to(buttonRef, {rotation: angle * (180 / Math.PI)});
+            gsap.to(buttonRef, { rotation: angle * (180 / Math.PI) });
           }
         });
       }
@@ -102,13 +102,13 @@ const CircleMenu: React.FC<CircleContainerProps> = ({
   };
 
   return (
-    <div className='circle-menu'>
-      <div className='circle-container' ref={circleRef}>
+    <div className="circle-menu">
+      <div className="circle-container" ref={circleRef}>
         {circleElements.map((element) => element)}
       </div>
-      <div className='year-range'>
-        <div className='year-start' ref={minYearRef}></div>
-        <div className='year-finish' ref={maxYearRef}></div>
+      <div className="year-range">
+        <div className="year-start" ref={minYearRef}></div>
+        <div className="year-finish" ref={maxYearRef}></div>
       </div>
     </div>
   );

@@ -11,7 +11,8 @@
   height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 15px $shadowColor;
-  background: transparent $swiperButton no-repeat 50%;
+  background: transparent $swiperButton no-repeat center;
+  background-size: 25%;
   cursor: pointer;
   position: absolute;
   margin: auto 0;

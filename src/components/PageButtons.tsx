@@ -1,5 +1,5 @@
-import React from 'react';
-import '../scss/components/PageButtons.scss';
+import React from "react";
+import "../scss/components/PageButtons.scss";
 
 interface PageButtonsProps {
   totalPages: number;
@@ -8,10 +8,10 @@ interface PageButtonsProps {
 }
 
 const PageButtons: React.FC<PageButtonsProps> = ({
-                                                   totalPages,
-                                                   currentPage,
-                                                   onPageChange,
-                                                 }) => {
+  totalPages,
+  currentPage,
+  onPageChange,
+}) => {
   const handlePrevPage = () => {
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
@@ -25,18 +25,18 @@ const PageButtons: React.FC<PageButtonsProps> = ({
   };
 
   return (
-    <div className='page-buttons'>
-			<span className='page-indicator'>{`${currentPage
+    <div className="page-buttons">
+      <span className="page-indicator">{`${currentPage
         .toString()
-        .padStart(2, '0')}/${totalPages.toString().padStart(2, '0')}`}</span>
-      <div className='page-buttons-container'>
+        .padStart(2, "0")}/${totalPages.toString().padStart(2, "0")}`}</span>
+      <div className="page-buttons-container">
         <button
-          className='page-button page-prev'
+          className="page-button page-prev"
           onClick={handlePrevPage}
           disabled={currentPage === 1}
         ></button>
         <button
-          className='page-button page-next'
+          className="page-button page-next"
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
         ></button>

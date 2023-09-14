@@ -1,4 +1,4 @@
-import './mock.json';
+import "./mock.json";
 
 export interface Event {
   id: number;

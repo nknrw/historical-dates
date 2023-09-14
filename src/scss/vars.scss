@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap");
 
-
-$fontMain: 'PT Sans', sans-serif;
-$fontYear: 'Bebas Neue', sans-serif;
-
+$fontMain: "PT Sans", sans-serif;
+$fontYear: "Bebas Neue", sans-serif;
 
 // colors
 $bgColor: #f4f5f9;
@@ -18,11 +16,7 @@ $shadowColor: rgba(56, 119, 238, 0.1);
 
 //images
 
-$pageBg: url('../../assets/bg.svg.png');
-$headingBg: url('../../assets/heading-bg.svg.png');
-$swiperButton: url('../../assets/swiper-button.svg.png');
-$pageButtonBg: url('../../assets/page-button.svg.png');
-//$pageBg: url('../../assets/bg.svg');
-//$headingBg: url('../../assets/heading-bg.svg');
-//$swiperButton: url('../../assets/swiper-button.svg');
-//$pageButtonBg: url('../../assets/page-button.svg');
+$pageBg: url("../../assets/bg.svg");
+$headingBg: url("../../assets/heading-bg.svg");
+$swiperButton: url("../../assets/swiper-button.svg");
+$pageButtonBg: url("../../assets/page-button.svg");

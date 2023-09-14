@@ -1,10 +1,10 @@
-import React from 'react';
-import {FreeMode, Navigation, Pagination} from 'swiper';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/scss/pagination';
-import '../scss/components/EventList.scss';
-import {Event as EventType} from '../types';
-import Event from './EventElement';
+import React from "react";
+import { FreeMode, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss/pagination";
+import "../scss/components/EventList.scss";
+import { Event as EventType } from "../types";
+import Event from "./EventElement";
 
 interface EventListProps {
   currentPage: number;
@@ -13,12 +13,12 @@ interface EventListProps {
 }
 
 const EventList: React.FC<EventListProps> = ({
-                                               currentPage,
-                                               eventsPerPage,
-                                               events,
-                                             }) => {
+  currentPage,
+  eventsPerPage,
+  events,
+}) => {
   return (
-    <div className='event-list'>
+    <div className="event-list">
       <Swiper
         key={currentPage}
         breakpoints={{
@@ -33,8 +33,8 @@ const EventList: React.FC<EventListProps> = ({
         }}
         modules={[FreeMode, Navigation, Pagination]}
         navigation={{
-          prevEl: '.prev',
-          nextEl: '.next',
+          prevEl: ".prev",
+          nextEl: ".next",
         }}
         spaceBetween={25}
         slidesPerView={1.75}
@@ -43,12 +43,12 @@ const EventList: React.FC<EventListProps> = ({
       >
         {events.map((event) => (
           <SwiperSlide key={event.id}>
-            <Event key={event.id} event={event}/>
+            <Event key={event.id} event={event} />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className='event-list-button prev'></div>
-      <div className='event-list-button next'></div>
+      <div className="event-list-button prev"></div>
+      <div className="event-list-button next"></div>
     </div>
   );
 };
